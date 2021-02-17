@@ -1,0 +1,56 @@
+html, body {
+    width: 100%;
+    height: 100%;
+    padding: 0;
+    margin: 0;
+}
+
+body {
+    display: grid;
+    height: 100%;
+    vertical-align: middle;
+    font: 20px "Trebuchet MS", "Lucida Sans";
+    text-shadow: 0 1px 0 rgba(255,255,255,.5);
+}
+
+.gamesList {
+    text-align: center;
+    list-style: none;
+    padding: 0;
+    margin: auto auto;
+    max-width: 350px;
+    width: 350px;
+    counter-reset: li; 
+}
+
+.gamesList li {
+    font-family: "Trebuchet MS", "Lucida Sans";
+    padding: 7px 20px;
+    margin-bottom: 10px;
+    border-radius: 5px;
+    box-shadow: 2px -2px 5px 0 rgba(0,0,0,.1), -2px -2px 5px 0 rgba(0,0,0,.1), 2px 2px 5px 0 rgba(0,0,0,.1), -2px 2px 5px 0 rgba(0,0,0,.1);
+    font-size: 20px;
+    letter-spacing: 2px;
+    transition: 0.3s all linear;
+}
+
+.game.Big:hover{
+    border-right: 10px solid crimson;
+}
+
+.game.Medium:hover{
+    border-right: 10px solid rgb(14, 153, 247)
+}
+
+.game.Little:hover{
+    border-right: 10px solid rgb(141, 243, 209);
+}
+
+.game:hover {
+    background: #E9E4E0;
+    cursor: pointer;
+}
+
+
+
+

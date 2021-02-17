@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <link rel="stylesheet" type="text/css" href="/main.css">
+        <link rel="stylesheet" type="text/css" href="/header.css">
+    </head>
+    <%- include('header.ejs') %>
+    <body>
+        <ol class="gamesList">
+            <h1>Список игр</h1>
+            <% 
+                let i = 0;
+                games.forEach(function(game){ 
+                    let hours = null;
+                    if (game.gameHours <= 100){
+                        type = "game Little";
+                    }
+                    if ((game.gameHours > 100) && (game.gameHours <= 200)){
+                        type = "game Medium";
+                    }
+                    if (game.gameHours > 200){
+                        type = "game Big";
+                    }
+                    let urlGet = `info/${i}`;                        
+            %>
+                <li class="<%=`${type}` %>" onclick=<%= `document.location.href=\"${urlGet}\"` %>> <%= game.name %> </li>
+            <%
+                i++;
+                }); 
+            %>
+        </ol>
+        
+    </body>
+</html>

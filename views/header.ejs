@@ -1,0 +1,14 @@
+<header>
+    <h1 class="headerName" onclick=<%= `location.href="/"` %> >My Games List</h1>
+    <div class="headerButtonsList">
+      <%if (pageType == "main") { %>
+        <button type="button" onclick=<%= `location.href="add"` %> >Добавить</button>
+      <% } %>
+
+      <%if (pageType == "info") { %>
+        <button type="button" onclick=<%= `location.href="add"` %> >Добавить</button>
+        <button type="button" onclick=<%= `location.href="delete"` %> >Удалить</button>
+        <button type="button" onclick=<%= `location.href=\"${urlEdit}\"` %> >Редактировать</button>
+      <% } %>
+    </div>
+</header>

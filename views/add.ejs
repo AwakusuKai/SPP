@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <link rel="stylesheet" type="text/css" href="/add.css">
+        <link rel="stylesheet" type="text/css" href="/header.css">
+    </head>
+    <%- include('header.ejs') %>
+    <body>
+        <form class="form" action="/add" method="POST">
+            <h1 class="form_title">Добавить игру</h1>
+            
+            <input class="form_input" name="name" placeholder="Название" required>
+            <input class="form_input" name="genre" placeholder="Жанр" required>
+            <input class="form_input" name="developer" placeholder="Разработчик" required>
+            <input class="form_input" name="description" placeholder="Описание" required>
+            <input class="form_input" type="number" name="gameHours" placeholder="Время в игре" required>
+            <button type="submit" class="form_button">Добавить</button>
+        </form>
+    </body>
+</html>

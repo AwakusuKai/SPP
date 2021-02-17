@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <link rel="stylesheet" type="text/css" href="/add.css">
+        <link rel="stylesheet" type="text/css" href="/header.css">
+    </head>
+    <%- include('header.ejs') %>
+    <body>
+        <form class="form" action="/info/edit/:id" method="POST">
+            <h1 class="form_title">Добавить игру</h1>
+            
+            <input class="form_input" name="name" placeholder="Название" value="<%= oldGame.name %>" required>
+            <input class="form_input" name="genre" placeholder="Жанр" value="<%= oldGame.genre %>" required>
+            <input class="form_input" name="developer" placeholder="Разработчик" value="<%= oldGame.developer %>" required>
+            <input class="form_input" name="description" placeholder="Описание" value="<%= oldGame.description %>" required>
+            <input class="form_input" type="number" name="gameHours" placeholder="Время в игре" value="<%= oldGame.gameHours %>" required>
+            <input type="hidden" name="oldGameIndex" value="<%= oldGameID %>">
+            
+            <button type="submit" class="form_button">Добавить</button>
+        </form>
+    </body>
+</html>

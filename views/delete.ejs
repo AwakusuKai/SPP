@@ -1,0 +1,17 @@
+<!DOCTYPE html> 
+<html lang="en"> 
+    <head> 
+        <meta charset="UTF-8"> 
+        <link rel="stylesheet" type="text/css" href="/main.css">
+        <link rel="stylesheet" type="text/css" href="/header.css">
+        <link rel="stylesheet" type="text/css" href="/add.css">
+    </head> 
+    <%- include('header.ejs') %>
+    <body>  
+        <form class="form" action="/info/delete/:id" method="POST">
+            <h1 class="form_title">Удаление игры: <%= oldGame.name %></h1>
+            <input type="hidden" name="gameIndex" value="<%= gameID %>">
+            <button type="submit" class="form_button">Удалить</button>
+        </form>
+    </body>
+</html>
