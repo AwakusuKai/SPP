@@ -25,24 +25,8 @@ class GamesList {
         new Game('The Wicher 3', 'Action RPG', 'CDPR', 'Описание', 158)
     ];
 
-    selectedGameIndex = -1;
-
     getGamesList() {
         return this.games;
-    }
-
-    selectGame(index){
-        if (this.games[index])
-        {
-            this.selectedGameIndex = index;
-        } else 
-        {
-            this.selectedGameIndex = -1;
-        }
-    }
-
-    getSelectedGame() {
-        return this.games[this.selectedGameIndex];
     }
 
     addGame(game){
